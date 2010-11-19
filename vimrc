@@ -85,8 +85,10 @@ if has("gui_running")
     set background=dark   " adapt colors for background
     " set transparency=5    " Barely transparent
     set guioptions-=T
-    set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
-    colorscheme scratched
+    set list 
+    set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
+    autocmd filetype html,xml set listchars-=tab:▷⋅.
+    colorscheme blackboard
 else
     colorscheme vibrantink   " use this color scheme
     set background=dark   " adapt colors for background
