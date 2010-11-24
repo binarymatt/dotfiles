@@ -26,6 +26,7 @@ set visualbell t_vb=    " turn off error beep/flash
 set novisualbell    " turn off visual bell
 set vb
 set nobackup        " do not keep a backup file
+set noswapfile
 set number          " show line numbers
 set numberwidth=4   " line numbering takes up 5 spaces
 set ignorecase      " ignore case when searching
