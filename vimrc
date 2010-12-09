@@ -80,7 +80,7 @@ set sm
 set smarttab
 if has("gui_running")
     " See ~/.gvimrc
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h14.00  " use this font
+    set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
     " set lines=50          " height = 50 lines
     " set columns=120       " width = 100 columns
     set background=dark   " adapt colors for background
@@ -168,6 +168,7 @@ set wildignore+=*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif
 map <F1> :previous<CR>  " map F1 to open previous buffer
 map <F2> :next<CR>      " map F2 to open next buffer
 " map <F3> :NERDTreeToggle<CR>" map F3 to open NERDTree
+map ` :NERDTreeToggle<CR>" map F3 to open NERDTree
 map <F7> :TlistToggle<CR> " map F7 to toggle the Tag Listing
 map <silent> <C-N> :silent noh<CR> " turn off highlighted search
 map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
