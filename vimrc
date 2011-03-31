@@ -89,9 +89,11 @@ if has("gui_running")
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
-    colorscheme blackboard
+    "colorscheme blackboard
+    colorscheme jellybeans
 else
-    colorscheme vibrantink   " use this color scheme
+    "colorscheme vibrantink   " use this color scheme
+    colorscheme jellybeans
     set background=dark   " adapt colors for background
 endif
 
