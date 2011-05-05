@@ -1,3 +1,7 @@
+filetype off 
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 set backspace=indent,eol,start
 set history=1000
@@ -90,6 +94,7 @@ if has("gui_running")
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     colorscheme blackboard
+    " colorscheme vividchalk
 else
     colorscheme vibrantink   " use this color scheme
     set background=dark   " adapt colors for background
@@ -196,6 +201,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>a :Ack
+nnoremap <leader>f :LAck
 
 set enc=utf-8
 set fileformats=unix,dos,mac
