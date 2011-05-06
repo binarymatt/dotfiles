@@ -10,3 +10,6 @@
 [submodule "vimfolder/bundle/supertab"]
 	path = vimfolder/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vimfolder/bundle/vim-coffescript"]
+	path = vimfolder/bundle/vim-coffescript
+	url = git://github.com/kchmck/vim-coffee-script.git

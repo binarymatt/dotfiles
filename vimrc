@@ -99,7 +99,6 @@ if has("gui_running")
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
-    colorscheme blackboard
     "colorscheme blackboard
     colorscheme jellybeans
     " colorscheme vividchalk
@@ -193,6 +192,7 @@ map ,ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
 map ,d :call <SID>SCMDiff()<CR>
 " map <S-T> :FufFile<CR>
 " map <C-T> :FufLine<CR>
+
 " Viewport Controls
 " ie moving between split panes
 map <silent>,h <C-w>h 
