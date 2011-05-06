@@ -1,0 +1,9 @@
+[submodule "vimfolder/bundle/command-t"]
+	path = vimfolder/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "vimfolder/bundle/vim-ack"]
+	path = vimfolder/bundle/vim-ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "vimfolder/bundle/tagbar"]
+	path = vimfolder/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
