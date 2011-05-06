@@ -208,6 +208,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>a :Ack
 nnoremap <leader>f :LAck
+nnoremap <silent> ,b :TagbarToggle<CR>
 
 set enc=utf-8
 set fileformats=unix,dos,mac
