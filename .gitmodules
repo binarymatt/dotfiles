@@ -7,3 +7,6 @@
 [submodule "vimfolder/bundle/tagbar"]
 	path = vimfolder/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "vimfolder/bundle/supertab"]
+	path = vimfolder/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
