@@ -1,6 +1,12 @@
-filetype off 
+" Load plugins from .vim/bundles using .vim/autoload/pathogen.vim
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+
+filetype off " On some Linux systems, this is necessary to make sure pathogen
+             " picks up ftdetect directories in plugins! :(
+syntax on
+filetype plugin indent on
+
 
 set nocompatible
 set backspace=indent,eol,start
@@ -49,7 +55,7 @@ set undolevels=200
 set cpoptions=$cF
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]  
-filetype plugin indent on " turn on the indent plugins
+" filetype plugin indent on " turn on the indent plugins
 
 set noautoindent    " turn off by default, enable for specific filetypes
 set nosmartindent   " turn off by default, enable for specific filetypes
@@ -174,7 +180,7 @@ map <F1> :previous<CR>  " map F1 to open previous buffer
 map <F2> :next<CR>      " map F2 to open next buffer
 " map <F3> :NERDTreeToggle<CR>" map F3 to open NERDTree
 map ` :NERDTreeToggle<CR>" map F3 to open NERDTree
-map <F7> :TlistToggle<CR> " map F7 to toggle the Tag Listing
+" map <F7> :TlistToggle<CR> " map F7 to toggle the Tag Listing
 map <silent> <C-N> :silent noh<CR> " turn off highlighted search
 map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
 map ,e :e ~/.vimrc<cr>      " edit my .vimrc file
@@ -182,8 +188,8 @@ map ,u :source ~/.vimrc<cr> " update the system settings from my vimrc file
 " map ,p :Lodgeit<CR>         " pastes selection / file to paste.pocoo.org
 map ,ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
 map ,d :call <SID>SCMDiff()<CR>
-map <S-T> :FufFile<CR>
-map <C-T> :FufLine<CR>
+" map <S-T> :FufFile<CR>
+" map <C-T> :FufLine<CR>
 " Viewport Controls
 " ie moving between split panes
 map <silent>,h <C-w>h 
