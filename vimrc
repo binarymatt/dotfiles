@@ -69,7 +69,7 @@ let NERDTreeShowBookmarks=1
 
 " VCS Command Configs
 let mapleader = ","
-
+map <leader>td <Plug>TaskList
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
@@ -209,13 +209,32 @@ nnoremap <leader><space> :nohlsearch<cr>
 " vnoremap <tab> %
 
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
-nnoremap <leader>a :Ack
-nnoremap <leader>f :LAck
+nnoremap <leader>a <Esc>:Ack!
+nnoremap <leader>f <Esc>:LAck!
 nnoremap <silent> ,b :TagbarToggle<CR>
+
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+
+let g:pep8_map='<leader>8'
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
 
 set enc=utf-8
 set fileformats=unix,dos,mac
 
 " set noerrorbells
 " set vb t_vb=
+" Add the virtualenv's site-packages to vim path
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
 
