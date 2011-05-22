@@ -13,3 +13,39 @@
 [submodule "vimfolder/bundle/vim-coffescript"]
 	path = vimfolder/bundle/vim-coffescript
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vimfolder/bundle/fugitive"]
+	path = vimfolder/bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "vimfolder/bundle/snipmate"]
+	path = vimfolder/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vimfolder/bundle/surround"]
+	path = vimfolder/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vimfolder/bundle/git"]
+	path = vimfolder/bundle/git
+	url = https://github.com/tpope/vim-git.git
+[submodule "vimfolder/bundle/minibufexpl"]
+	path = vimfolder/bundle/minibufexpl
+	url = https://github.com/sontek/minibufexpl.vim.git
+[submodule "vimfolder/bundle/gundo"]
+	path = vimfolder/bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "vimfolder/bundle/pydoc"]
+	path = vimfolder/bundle/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
+[submodule "vimfolder/bundle/pep8"]
+	path = vimfolder/bundle/pep8
+	url = https://github.com/vim-scripts/pep8.git
+[submodule "vimfolder/bundle/makegreen"]
+	path = vimfolder/bundle/makegreen
+	url = https://github.com/reinh/vim-makegreen
+[submodule "vimfolder/bundle/tasklist"]
+	path = vimfolder/bundle/tasklist
+	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "vimfolder/bundle/nerdtree"]
+	path = vimfolder/bundle/nerdtree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule "vimfolder/bundle/ropevim"]
+	path = vimfolder/bundle/ropevim
+	url = https://github.com/sontek/rope-vim.git
