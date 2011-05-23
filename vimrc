@@ -70,6 +70,7 @@ let NERDTreeShowBookmarks=1
 " VCS Command Configs
 let mapleader = ","
 map <leader>td <Plug>TaskList
+map <unique> <silent> <Leader>tg :call MakeGreen()<cr>
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
