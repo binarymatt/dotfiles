@@ -52,7 +52,7 @@ set shortmess=atI   " Abbreviate messages
 set nostartofline   " don't jump to first character when paging
 set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
 set undolevels=200
-set cpoptions=$cF
+"set cpoptions=$cF
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]  
 " filetype plugin indent on " turn on the indent plugins
@@ -190,7 +190,7 @@ map ,e :e ~/.vimrc<cr>      " edit my .vimrc file
 map ,u :source ~/.vimrc<cr> " update the system settings from my vimrc file
 " map ,p :Lodgeit<CR>         " pastes selection / file to paste.pocoo.org
 map <leader>ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
-map ,d :call <SID>SCMDiff()<CR>
+" map ,d :call <SID>SCMDiff()<CR>
 " map <S-T> :FufFile<CR>
 " map <C-T> :FufLine<CR>
 
