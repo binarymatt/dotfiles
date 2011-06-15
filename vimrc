@@ -189,7 +189,7 @@ map ,v :sp ~/.vimrc<cr> " edit my .vimrc file in a split
 map ,e :e ~/.vimrc<cr>      " edit my .vimrc file
 map ,u :source ~/.vimrc<cr> " update the system settings from my vimrc file
 " map ,p :Lodgeit<CR>         " pastes selection / file to paste.pocoo.org
-map ,ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
+map <leader>ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
 map ,d :call <SID>SCMDiff()<CR>
 " map <S-T> :FufFile<CR>
 " map <C-T> :FufLine<CR>
@@ -197,7 +197,7 @@ map ,d :call <SID>SCMDiff()<CR>
 " Viewport Controls
 " ie moving between split panes
 map <silent>,h <C-w>h 
-map <silent>,j <C-w>j
+" map <silent>,j <C-w>j
 map <silent>,k <C-w>k
 map <silent>,l <C-w>l
 
@@ -212,7 +212,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>a <Esc>:Ack!
 nnoremap <leader>f <Esc>:LAck!
-nnoremap <silent> ,b :TagbarToggle<CR>
+nnoremap <silent> <leader>b :TagbarToggle<CR>
 
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
