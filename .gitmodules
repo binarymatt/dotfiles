@@ -49,3 +49,6 @@
 [submodule "vimfolder/bundle/ropevim"]
 	path = vimfolder/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "vimfolder/bundle/delimitMate"]
+	path = vimfolder/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
