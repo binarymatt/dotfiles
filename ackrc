@@ -1,1 +1,2 @@
 --type-set=python=.py
+--type-set=js=.js,.json

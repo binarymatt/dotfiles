@@ -7,8 +7,8 @@ alias ls='ls -G'
 alias ll='ls -hlatr'
 
 
-export GIT_EDITOR="~/bin/mate -w" 
-export EDITOR="vim"
+export GIT_EDITOR="mvim" 
+export EDITOR="mvim"
 #source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 #export PS1='[mattgeorge:\w$(__git_ps1)] \[\033[01;32m\]\u\[\033[00m\]\$ '
@@ -41,4 +41,5 @@ export MY_BASEPROMPT='\e${MY_USER_COLOR}\u\
 \e${MY_GRAY_COLOR}$(__git_ps1)\e${MY_DEFAULT_COLOR}'
 export PS1="${MY_BASEPROMPT}
 $ "
-
+export HISTFILESIZE=100000
+export HISTCONTROL=ignoreboth
