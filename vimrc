@@ -104,8 +104,8 @@ if has("gui_running")
     colorscheme jellybeans
     " colorscheme vividchalk
 else
-    "colorscheme vibrantink   " use this color scheme
-    colorscheme jellybeans
+    colorscheme vibrantink   " use this color scheme
+    set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
     set background=dark   " adapt colors for background
 endif
 

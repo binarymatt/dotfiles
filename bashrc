@@ -41,5 +41,7 @@ export MY_BASEPROMPT='\e${MY_USER_COLOR}\u\
 \e${MY_GRAY_COLOR}$(__git_ps1)\e${MY_DEFAULT_COLOR}'
 export PS1="${MY_BASEPROMPT}
 $ "
+export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoreboth
+export HISTIGNORE="&:[ ]*:ls:ll:la:l:cd:pwd:exit:mc:su:df:clear"
