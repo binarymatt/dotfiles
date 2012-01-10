@@ -52,3 +52,6 @@
 [submodule "vimfolder/bundle/delimitMate"]
 	path = vimfolder/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate
+[submodule "vimfolder/bundle/less"]
+	path = vimfolder/bundle/less
+	url = https://github.com/groenewege/vim-less.git
