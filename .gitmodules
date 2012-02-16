@@ -58,3 +58,6 @@
 [submodule "vimfolder/bundle/less"]
 	path = vimfolder/bundle/less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "vimfolder/bundle/syntastic"]
+	path = vimfolder/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
