@@ -1,8 +1,10 @@
 " Load plugins from .vim/bundles using .vim/autoload/pathogen.vim
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+filetype off
+" call pathogen#helptags()
+call pathogen#infect()
+" call pathogen#runtime_append_all_bundles()
 
-filetype off " On some Linux systems, this is necessary to make sure pathogen
+" filetype off " On some Linux systems, this is necessary to make sure pathogen
              " picks up ftdetect directories in plugins! :(
 syntax on
 filetype plugin indent on
