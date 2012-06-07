@@ -72,7 +72,7 @@ let NERDTreeShowBookmarks=1
 " VCS Command Configs
 let mapleader = ","
 map <leader>td <Plug>TaskList
-map <unique> <silent> <Leader>tg :call MakeGreen()<cr>
+map <unique> <silent> <Leader>tgg :call MakeGreen()<cr>
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
@@ -102,11 +102,12 @@ if has("gui_running")
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
-    "colorscheme blackboard
     colorscheme jellybeans
-    " colorscheme vividchalk
+    "colorscheme ir_black
 else
-    colorscheme vibrantink   " use this color scheme
+     colorscheme vibrantink   " use this color scheme
+     colorscheme jellybeans
+    " colorscheme ir_black
     set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
     set background=dark   " adapt colors for background
 endif

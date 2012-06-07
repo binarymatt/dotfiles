@@ -4,12 +4,11 @@ export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 alias ls='ls -G'  
-alias ll='ls -hlatr'
+alias ll='ls -hlatr --color'
 alias gg='history | grep'
 
 
 export GIT_EDITOR="mvim" 
-export EDITOR="mvim"
 #source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 #export PS1='[mattgeorge:\w$(__git_ps1)] \[\033[01;32m\]\u\[\033[00m\]\$ '
