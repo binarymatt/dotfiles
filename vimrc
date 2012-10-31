@@ -93,30 +93,32 @@ set sm
 set smarttab
 if has("gui_running")
     " See ~/.gvimrc
-    set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
+    " set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
+    set guifont=Menlo:h14.00
     " set lines=50          " height = 50 lines
     " set columns=120       " width = 100 columns
     set background=dark   " adapt colors for background
     " set transparency=5    " Barely transparent
     set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     colorscheme jellybeans
     "colorscheme ir_black
+    set cursorline
 else
      colorscheme vibrantink   " use this color scheme
      colorscheme jellybeans
     " colorscheme ir_black
     set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
     set background=dark   " adapt colors for background
+    let g:loaded_syntastic_plugin=0
 endif
 
 " colorscheme scratch
 " set bg=dark
-if has("gui_running")
-    set cursorline
-endif
 if has("autocmd")
     " Restore cursor position
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -230,7 +232,13 @@ set fileformats=unix,dos,mac
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=3
+let g:syntastic_python_checker_args="--ignore=E501,E302,W391"
+let g:loaded_xml_syntax_checker=0
 
+let vimclojure#HighlightBuiltins=1
+let vimclojure#HighlightContrib=1
+let vimclojure#DynamicHighlighting=1
+let vimclojure#ParenRainbow=1
 " set noerrorbells
 " set vb t_vb=
 " Add the virtualenv's site-packages to vim path

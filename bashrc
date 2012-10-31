@@ -4,7 +4,7 @@ export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 alias ls='ls -G'  
-alias ll='ls -hlatr --color'
+alias ll='ls -hlatr'
 alias gg='history | grep'
 
 

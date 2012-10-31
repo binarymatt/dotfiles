@@ -61,3 +61,9 @@
 [submodule "vimfolder/bundle/powerline"]
 	path = vimfolder/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "vimfolder/bundle/clojure"]
+	path = vimfolder/bundle/clojure
+	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vimfolder/bundle/scala"]
+	path = vimfolder/bundle/scala
+	url = git://github.com/derekwyatt/vim-scala.git
