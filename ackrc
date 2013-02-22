@@ -2,3 +2,4 @@
 --type-set=js=.js,.json
 --type-set=html=.html
 --type-set=coffee=.coffee
+--type-set=less=.less

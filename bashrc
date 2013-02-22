@@ -8,7 +8,7 @@ alias ll='ls -hlatr'
 alias gg='history | grep'
 
 
-export GIT_EDITOR="mvim" 
+export GIT_EDITOR="mvim -f" 
 #source /usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 #export PS1='[mattgeorge:\w$(__git_ps1)] \[\033[01;32m\]\u\[\033[00m\]\$ '
