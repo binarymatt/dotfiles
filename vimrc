@@ -232,7 +232,7 @@ set fileformats=unix,dos,mac
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=3
-let g:syntastic_python_checker_args="--ignore=E501,E302,W391"
+let g:syntastic_python_checker_args="--ignore=E501,E302,W391,W601"
 let g:loaded_xml_syntax_checker=0
 
 let vimclojure#HighlightBuiltins=1

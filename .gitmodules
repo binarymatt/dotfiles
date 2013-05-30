@@ -67,3 +67,6 @@
 [submodule "vimfolder/bundle/scala"]
 	path = vimfolder/bundle/scala
 	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "vimfolder/bundle/salt-vim"]
+	path = vimfolder/bundle/salt-vim
+	url = git://github.com/saltstack/salt-vim.git

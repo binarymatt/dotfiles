@@ -3,3 +3,5 @@
 --type-set=html=.html
 --type-set=coffee=.coffee
 --type-set=less=.less
+--type-set=rst=.rst
+--type-set=yaml=.sls
