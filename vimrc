@@ -91,10 +91,11 @@ syntax on
 set expandtab
 set sm
 set smarttab
+set guifont=Menlo\ for\ Powerline:h14.00
 if has("gui_running")
     " See ~/.gvimrc
     " set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
-    set guifont=Menlo:h14.00
+    " set guifont=Menlo\ for\ Powerline:h14.00
     " set lines=50          " height = 50 lines
     " set columns=120       " width = 100 columns
     set background=dark   " adapt colors for background
@@ -112,9 +113,10 @@ else
      colorscheme vibrantink   " use this color scheme
      colorscheme jellybeans
     " colorscheme ir_black
-    set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
+    " set guifont=Menlo\ for\ Powerline:h14.00
     set background=dark   " adapt colors for background
     let g:loaded_syntastic_plugin=0
+    let g:airline_enable_syntastic=0
 endif
 
 " colorscheme scratch
@@ -239,6 +241,8 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
+
+let g:airline_powerline_fonts=1
 " set noerrorbells
 " set vb t_vb=
 " Add the virtualenv's site-packages to vim path

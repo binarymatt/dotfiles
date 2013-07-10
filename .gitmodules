@@ -58,9 +58,6 @@
 [submodule "vimfolder/bundle/syntastic"]
 	path = vimfolder/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vimfolder/bundle/powerline"]
-	path = vimfolder/bundle/powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vimfolder/bundle/clojure"]
 	path = vimfolder/bundle/clojure
 	url = git://github.com/vim-scripts/VimClojure.git
@@ -70,3 +67,6 @@
 [submodule "vimfolder/bundle/salt-vim"]
 	path = vimfolder/bundle/salt-vim
 	url = git://github.com/saltstack/salt-vim.git
+[submodule "vimfolder/bundle/vim-airline"]
+	path = vimfolder/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
