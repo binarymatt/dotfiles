@@ -40,9 +40,6 @@
 [submodule "vimfolder/bundle/nerdtree"]
 	path = vimfolder/bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
-[submodule "vimfolder/bundle/ropevim"]
-	path = vimfolder/bundle/ropevim
-	url = https://github.com/sontek/rope-vim.git
 [submodule "vimfolder/bundle/delimitMate"]
 	path = vimfolder/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate
