@@ -1,0 +1,16 @@
+[core]
+	editor = vim -f
+[user]
+	name = Matt George
+	email = mgeorge@gmail.com
+[diff]
+	tool = vimdiff
+	tool = vim
+    algorithm = patience
+[difftool]
+	prompt = false
+[alias]
+	co = checkout
+	d = difftool
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	undo = reset --soft HEAD^

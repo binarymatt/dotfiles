@@ -72,7 +72,7 @@ let NERDTreeShowBookmarks=1
 " VCS Command Configs
 let mapleader = ","
 map <leader>td <Plug>TaskList
-map <unique> <silent> <Leader>tgg :call MakeGreen()<cr>
+map <unique> <silent> <Leader>tggd :call MakeGreen()<cr>
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
@@ -106,22 +106,23 @@ if has("gui_running")
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
-    colorscheme jellybeans
+    " colorscheme jellybeans
     "colorscheme ir_black
     set cursorline
 else
-     colorscheme vibrantink   " use this color scheme
-     colorscheme jellybeans
+     " colorscheme vibrantink   " use this color scheme
+     " colorscheme jellybeans
     " colorscheme ir_black
     " set guifont=Menlo\ for\ Powerline:h14.00
     set background=dark   " adapt colors for background
     let g:loaded_syntastic_plugin=0
-    let g:airline_enable_syntastic=0
+    " let g:airline_enable_syntastic=0
 endif
 
-" colorscheme scratch
+colorscheme solarized
+set background=dark
 " set bg=dark
-if has("autocmd")
+"if has("autocmd")
     " Restore cursor position
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
@@ -136,10 +137,10 @@ if has("autocmd")
     au FileType cpp,c,java,sh,pl,php,py,asp  set smartindent
     au FileType cpp,c,java,sh,pl,php,py,asp  set cindent
     au FileType py set foldmethod=indent
-    au FileType py set textwidth=79  " PEP-8 friendly
+    au FileType py set textwidth=99  " PEP-8 friendly
     au FileType py inoremap # X#
     au FileType py set expandtab
-    au FileType py set omnifunc=pythoncomplete#Complete
+    " au FileType py set omnifunc=pythoncomplete#Complete
     autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
     autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
     "au BufRead mutt*[0-9] set tw=72
@@ -163,8 +164,11 @@ if has("autocmd")
     " autocmd FileType python set ff=unix
     " Uncomment to use pylint on save
     " autocmd FileType python compiler pylint
+    " == GO Settings ==
+    autocmd FileType go set noexpandtab
 
-endif
+
+"endif
 
 
 
@@ -174,6 +178,8 @@ map  :Sexplore<CR>
 map  :Vexplore<CR>
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
+map [b :bn<cr>
+map ]b :bp<cr>
 
 
 " Show me where I'm exceeding 80 chars on a line
@@ -219,14 +225,11 @@ nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>a <Esc>:Ack!
 nnoremap <leader>f <Esc>:LAck!
-nnoremap <silent> <leader>b :TagbarToggle<CR>
-
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+" nnoremap <silent> <leader>b :TagbarToggle<CR>
 
 
-let g:pep8_map='<leader>8'
-let g:SuperTabDefaultCompletionType = "context"
+" let g:pep8_map='<leader>8'
+" let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
 set enc=utf-8
@@ -234,8 +237,11 @@ set fileformats=unix,dos,mac
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=3
-let g:syntastic_python_checker_args="--ignore=E501,E302,W391,W601"
+let g:syntastic_python_checker_args="--ignore=E501,E302,W391,W601,W1001"
 let g:loaded_xml_syntax_checker=0
+let g:syntastic_echo_current_error=1
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
@@ -243,17 +249,12 @@ let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 
 let g:airline_powerline_fonts=1
-" set noerrorbells
-" set vb t_vb=
-" Add the virtualenv's site-packages to vim path
-" py << EOF
-"import os.path
-"import sys
-"import vim
-"if 'VIRTUAL_ENV' in os.environ:
-"    project_base_dir = os.environ['VIRTUAL_ENV']
-"    sys.path.insert(0, project_base_dir)
-"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"    execfile(activate_this, dict(__file__=activate_this))
-"EOF
-
+let g:airline#extensions#tabline#enabled = 1
+let g:bufferline_echo = 0
+" jedi settings
+" let g:jedi#autocompletion_command = "<leader>p"
+" autocompletion_command
+" let g:jedi#autocompletion_command = "<C-Space>"
+"let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#popup_on_dot = 0
+"let g:SuperTabDefaultCompletionType = "context"

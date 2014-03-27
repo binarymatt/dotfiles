@@ -5,3 +5,4 @@
 --type-set=less=.less
 --type-set=rst=.rst
 --type-set=yaml=.sls
+--ignore-dir=migrations
