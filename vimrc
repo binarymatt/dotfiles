@@ -250,7 +250,9 @@ let vimclojure#ParenRainbow=1
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamecollapse=0
 let g:bufferline_echo = 0
+let g:airline_theme="powerlineish"
 " jedi settings
 " let g:jedi#autocompletion_command = "<leader>p"
 " autocompletion_command
