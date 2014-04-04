@@ -234,13 +234,14 @@ set completeopt=menuone,longest,preview
 
 set enc=utf-8
 set fileformats=unix,dos,mac
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=3
-let g:syntastic_python_checker_args="--ignore=E501,E302,W391,W601,W1001"
+let g:syntastic_python_flake8_args="--ignore=E501,E302,W391,W601,W1001"
 let g:loaded_xml_syntax_checker=0
 let g:syntastic_echo_current_error=1
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 let vimclojure#HighlightBuiltins=1
@@ -251,6 +252,7 @@ let vimclojure#ParenRainbow=1
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse=0
+let g:airline#extensions#tabline#buffer_nr_show=1
 let g:bufferline_echo = 0
 let g:airline_theme="powerlineish"
 " jedi settings
