@@ -73,6 +73,12 @@ let NERDTreeShowBookmarks=1
 let mapleader = ","
 map <leader>td <Plug>TaskList
 map <unique> <silent> <Leader>tggd :call MakeGreen()<cr>
+
+" useful buffer mappings
+map <right> :bn<cr>
+map <left> :bp<cr>
+map <down> :bd<cr>
+
 " Syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
