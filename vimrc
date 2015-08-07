@@ -92,6 +92,8 @@ set expandtab
 set sm
 set smarttab
 set guifont=Menlo\ for\ Powerline:h14.00
+    set list 
+    set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
 if has("gui_running")
     " See ~/.gvimrc
     " set guifont=DejaVu\ Sans\ Mono:h14.00  " use this font
@@ -103,8 +105,8 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    set list 
-    set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
+    " set list 
+    " set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     " colorscheme jellybeans
     "colorscheme ir_black
@@ -156,6 +158,7 @@ set background=dark
     autocmd FileType sql set shiftwidth=2
     autocmd FileType sql set softtabstop=2
     autocmd FileType sql set tabstop=2
+    autocmd FileType robot set tabstop=2 softtabstop=2 shiftwidth=2
     
     " == Python Settings ==
     " Don't wrap at textwidth
@@ -165,7 +168,7 @@ set background=dark
     " Uncomment to use pylint on save
     " autocmd FileType python compiler pylint
     " == GO Settings ==
-    autocmd FileType go set noexpandtab
+    autocmd FileType go set expandtab
 
 
 "endif
@@ -235,12 +238,14 @@ set completeopt=menuone,longest,preview
 set enc=utf-8
 set fileformats=unix,dos,mac
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=3
-let g:syntastic_python_flake8_args="--ignore=E501,E302,W391,W601,W1001"
+" let g:syntastic_python_flake8_args="--ignore=E501,E302,W391,W601,W1001"
+let g:syntastic_python_flake8_args="--ignore=E501,C0301,W0142,W0402,R0201,E1101,E1102,C0103,R0901,R0903,R0904,C1001,W0223,W0232,W0201,E1103,R0801,C0111"
 let g:loaded_xml_syntax_checker=0
-let g:syntastic_echo_current_error=1
+" let g:syntastic_echo_current_error=0
 " let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
