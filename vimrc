@@ -1,11 +1,12 @@
 " Load plugins from .vim/bundles using .vim/autoload/pathogen.vim
 filetype off
 " call pathogen#helptags()
-call pathogen#infect()
+execute pathogen#infect()
 " call pathogen#runtime_append_all_bundles()
 
 " filetype off " On some Linux systems, this is necessary to make sure pathogen
              " picks up ftdetect directories in plugins! :(
+set t_Co=256
 syntax on
 filetype plugin indent on
 
@@ -121,7 +122,7 @@ else
     " let g:airline_enable_syntastic=0
 endif
 
-colorscheme solarized
+colorscheme minimalist
 set background=dark
 " set bg=dark
 "if has("autocmd")

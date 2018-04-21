@@ -70,3 +70,9 @@
 [submodule "vimfolder/bundle/rust.vim"]
 	path = vimfolder/bundle/rust.vim
 	url = git://github.com/wting/rust.vim.git
+[submodule "vimfolder/bundle/colorschemes"]
+	path = vimfolder/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vimfolder/bundle/vim-go"]
+	path = vimfolder/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
