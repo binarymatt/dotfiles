@@ -6,7 +6,7 @@ execute pathogen#infect()
 
 " filetype off " On some Linux systems, this is necessary to make sure pathogen
              " picks up ftdetect directories in plugins! :(
-set t_Co=256
+"set t_Co=256
 syntax on
 filetype plugin indent on
 
@@ -92,7 +92,9 @@ syntax on
 set expandtab
 set sm
 set smarttab
-set guifont=Menlo\ for\ Powerline:h14.00
+
+set guifont=Hack:h16.00
+"set guifont=Menlo\ for\ Powerline:h14.00
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
 if has("gui_running")
@@ -118,7 +120,7 @@ else
     " colorscheme ir_black
     " set guifont=Menlo\ for\ Powerline:h14.00
     set background=dark   " adapt colors for background
-    let g:loaded_syntastic_plugin=0
+    " let g:loaded_syntastic_plugin=0
     " let g:airline_enable_syntastic=0
 endif
 
