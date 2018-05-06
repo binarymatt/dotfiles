@@ -1,16 +1,38 @@
 " Load plugins from .vim/bundles using .vim/autoload/pathogen.vim
+set nocompatible
 filetype off
-" call pathogen#helptags()
-call pathogen#infect()
-" call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'rbgrouleff/bclose.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fatih/vim-go'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'mileszs/ack.vim'
+Plugin 'bling/vim-airline'
+Plugin 'Raimondi/delimitMate'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomasr/molokai'
+Plugin 'antlypls/vim-colors-codeschool'
+Plugin 'hdima/python-syntax'
+Plugin 'airblade/vim-gitgutter'
 
 " filetype off " On some Linux systems, this is necessary to make sure pathogen
              " picks up ftdetect directories in plugins! :(
-syntax on
+call vundle#end()
 filetype plugin indent on
+syntax on
+syntax enable
 
-
-set nocompatible
 set backspace=indent,eol,start
 set history=1000
 set scrolloff=3     " keep 3 lines when scrolling
@@ -87,11 +109,11 @@ let Tlist_File_Fold_Auto_Close = 1         " Close folds for inactive files
 " SCMDiff Plugin Configuration
 let SCMDiffCommand = 'git'
 
-syntax on
 set expandtab
 set sm
 set smarttab
-set guifont=Menlo\ for\ Powerline:h14.00
+" set guifont=Menlo\ for\ Powerline:h14.00
+set guifont=Hack:h16.00
     set list 
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
 if has("gui_running")
@@ -267,3 +289,4 @@ let g:airline_theme="powerlineish"
 "let g:jedi#use_tabs_not_buffers = 0
 "let g:jedi#popup_on_dot = 0
 "let g:SuperTabDefaultCompletionType = "context"
+nnoremap <leader>j :YcmCompleter GoToDeclaration<CR>
