@@ -4,6 +4,9 @@ alias cleangit='git branch --merged master | grep -v "\* master" | xargs -n 1 gi
 alias localserver='python -m SimpleHTTPServer 8000'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+
 export VOLTA_HOME="$HOME/.volta"
 [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
