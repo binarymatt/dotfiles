@@ -6,7 +6,8 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
-
+export SPACESHIP_DIR_TRUNC_REPO=false
+export SPACESHIP_DIR_TRUNC=5
 export VOLTA_HOME="$HOME/.volta"
 [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
